@@ -1,7 +1,6 @@
 NATURALLY
 ----------
 
-/*-----------------------------------------------------------------------------------
 Compile with
 "natural <file>.nat"
 Statements end with '.'
@@ -62,4 +61,3 @@ Value of <variable>'s <attribute> a.attribute
 <argument list> = <argument> | <argument> <last arg> | <argument>, <argument list>
 <last arg> = and <argument>
 <argument> = <variable> | <primitive>
------------------------------------------------------------------------------------*/	
