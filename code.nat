@@ -49,10 +49,8 @@ list
 dictionary
 set
 boolean
-complex
 
 // Complex data types
-set
 queue
 priority_queue
 stack
@@ -82,11 +80,11 @@ Get <integer>th element of a.
 Class and Operator Operations
 -----------------------------
 
-Type of a.
-<firstterm> <function> <secondterm> a.   				a.function()
-<firstterm> <function> <secondterm> a's elements. 		a.function()	//Only valid for complex data structures.
-<firstterm> <function> <secondterm> <argument list>
-Value of <variable>'s <attribute>						a.attribute
+<variable manipulation> =
+<firstterm> <function> <secondterm> a. |   					a.function()
+<firstterm> <function> <secondterm> a's elements. | 		a.function()	//Only valid for complex data structures.
+<firstterm> <function> <secondterm> <argument list> |
+Value of <variable>'s <attribute>						 	a.attribute
 
 <firstterm> = Find | 
 <secondterm> = of | 
@@ -95,4 +93,43 @@ Value of <variable>'s <attribute>						a.attribute
 <last arg> = and <argument>
 <argument> = <variable> | <primitive>
 
+Definition and Declarations
+--------------------------
+
+<variabledeclaration> = Let <variable> be <type> | Let <variable> be <type> value <object> |
+						Set <variable> to <object> | Define <variable> value <object>
+
+<classdeclaration> = 
+Define class <classname>, | Declare class <classname>,
+	with variable(s),
+		<variable> type <type> value <object>
+	with function(s),
+		<functioname> declared as
+			<functiondefinition>
+
+<functiondeclaration> = 
+Define function <functioname>,	| Define function <functioname>,
+	<functiondefinition>
+	
+<functiondefinition> = <body><functiondefinition> | <returnstatement><functiondefinition> | e
+
+<returnstatement> = (return <variable> | e)
+<body> = <variabledeclaration><body> | <variablemanipulation><body> | 
+		  functiondeclaration><body> | <classdeclaration><body> | e
+
+<fordeclaration> = for <integer> times, iterate through <complexdatastructure> with i
 -----------------------------------------------------------------------------------*/
+
+What we require to implement
+Do Comments and blanklines
+o If/elif/else, for, class and function blocks
+Do Assignment, variables
+Do Primitive data types
+Do Strings, lists, dictionary
+o Data type conversions (integer to octal, hex, bin, char; str, float, tuple, set)
+o Operators (bitwise and/bitwise or/less_than,greater_than,less_than_equal,greater_than_equal,membership,identity, logical_and, logical_or, lexical, not_equal, in, not_in) (define operators on class, type)
+o break, continue, pass statements
+o File I/O
+o Normal I/O
+o Exception Handling
+o Classes and objects

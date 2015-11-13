@@ -1,20 +1,33 @@
 #!/usr/bin/env python
-
 import sys
 
-def interpret(comp):
-	print comp
+def tokenize(str):
+	tokens = []
+	iscomment = str.count('/')-str.lstrip('/').count('/')==2
+	if(iscomment):
+		return (0,0,['//',str.lstrip('/')])
+				
+	if(str.lstrip('\t').count('\t')>0):
+		return (0,0,[])
+	tabs = str.count('\t')
+	str = str.lstrip('\t')
 
-try:
-	code = open(sys.argv[1])
-except:
-	"No input files provided as argument. Compilation terminated."
-
-print "Compiling...\n"
-blocks = code.readlines()
-for block in blocks:
-	statements = block.split('.')
-	for statement in statements:
-		components = statement.split(',')
-		interpret(components)
-
+	endcomma = str.rstrip(',').endswith(',')
+	str = str.rstrip(', ')
+	
+	tokens = str.split(' ')
+	return (tabs,endcomma,tokens)
+		
+def clean(tokens):
+	reserved = ["a","an","the"]
+	newtokens = []
+	for token in tokens:
+		if(token in reserved):
+			pass
+		newtokens.append(token)
+	return newtokens
+	
+def lexify(statement):
+	tabs,endcomma,tokens = tokenize(statement)
+	lexicaltokens = clean(tokens)
+	return (tabs,endcomma,lexicaltokens)
