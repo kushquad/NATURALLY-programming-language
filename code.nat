@@ -122,14 +122,13 @@ Define function <functioname>,	| Define function <functioname>,
 
 What we require to implement
 Do Comments and blanklines
-o If/elif/else, for, class and function blocks
+Do If/elif/else, for, class and function blocks
 Do Assignment, variables
-Do Primitive data types
-Do Strings, lists, dictionary
-o Data type conversions (integer to octal, hex, bin, char; str, float, tuple, set)
+Do Normal I/O
+o Primitive data types
+o Strings, lists, dictionary
 o Operators (bitwise and/bitwise or/less_than,greater_than,less_than_equal,greater_than_equal,membership,identity, logical_and, logical_or, lexical, not_equal, in, not_in) (define operators on class, type)
 o break, continue, pass statements
-o File I/O
-o Normal I/O
-o Exception Handling
+o Body
 o Classes and objects
+o Data type conversions (integer to octal, hex, bin, char; str, float, tuple, set)
