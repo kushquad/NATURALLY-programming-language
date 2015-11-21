@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+b = 5
+c = ( b + 4 ) * 10
+# This is a comment
+print b + c
+number = raw_input()
+d = number + b - c
+print d
+if d >= c:
+	print "Hello"
+else:
+	print "World"
+	print b , c , d + c
+while b > 0:
+	print b
+	b = b - 1

@@ -1,0 +1,16 @@
+Set b to 5
+Set c to ( b plus 4 ) times 10
+// This is a comment
+Print b plus c
+Input number
+Set d to number plus b minus c
+Print d
+If d greater than equals c
+	Print "Hello"
+else
+	print "World"
+	
+print b , c , d plus c
+while b greater than 0
+	print b
+	Set b to b minus 1
