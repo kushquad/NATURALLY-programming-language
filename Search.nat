@@ -1,0 +1,21 @@
+Print "Enter 5 numbers"
+Set c to []
+Set b to 5
+while b greater than 0
+	input i as int
+	call c.append with i
+	Set b to b minus 1
+Set b to 5
+Print "Enter number to search"
+Set flag to False
+Input d as int
+while b greater than 0
+	if d == c[5 minus b]
+		Set flag to True
+		Set b to -1
+	Set b to b minus 1
+
+if flag == True
+	print "Found"
+else
+	print "Not found"

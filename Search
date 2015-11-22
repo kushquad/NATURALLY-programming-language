@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+print "Enter 5 numbers"
+c = []
+b = 5
+while b > 0:
+	i = int(raw_input())
+	c.append(i)
+	b = b - 1
+b = 5
+print "Enter number to search"
+flag = False
+d = int(raw_input())
+while b > 0:
+	if d == c[5 - b]:
+		flag = True
+		b = -1
+	b = b - 1
+if flag == True:
+	print "Found"
+else:
+	print "Not found"

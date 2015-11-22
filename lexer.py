@@ -19,7 +19,7 @@ def tokenize(str):
 	return (tabs,endcomma,tokens)
 		
 def clean(tokens):
-	reserved = ["a","an","the","to"]
+	reserved = ["","a","an","the","is"]
 	newtokens = []
 	for token in tokens:
 		if(token in reserved):
